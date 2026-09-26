@@ -1,0 +1,48 @@
+# Generated imagery (excluded for now)
+design/imagery/
+assets/images/sample-trip/
+
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native builds (Expo prebuild / EAS)
+/ios
+/android
+*.ipa
+*.apk
+*.aab
+
+# Metro
+.metro-health-check*
+
+# Env and secrets
+.env
+.env*.local
+*.pem
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Debug logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# TypeScript
+*.tsbuildinfo
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Obsidian workspace state
+docs/.obsidian/workspace*.json

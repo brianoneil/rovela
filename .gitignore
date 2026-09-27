@@ -14,6 +14,9 @@ expo-env.d.ts
 # Native builds (Expo prebuild / EAS)
 /ios
 /android
+.kotlin/
+*.orig.*
+*.jks
 *.ipa
 *.apk
 *.aab

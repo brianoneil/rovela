@@ -2,7 +2,7 @@
 
 > How we go from ideation docs to a shipped React Native (Expo) app for iPhone, iPad, Android phones, and Android tablets.
 
-**Status:** Phase 0 — Design exploration in Paper (nothing built in the app yet)
+**Status:** Phase 1 — Foundation (Expo SDK 57 app scaffolded; Phase 0 designs laid out in Paper for phone + iPad landscape)
 
 ---
 
@@ -26,7 +26,7 @@ Updates to the proposed stack in [[00 - Rovela Overview]] are flagged with ⚠�
 | Framework | Expo (latest stable SDK), TypeScript strict | **Development builds required** — Mapbox and HealthKit do not run in Expo Go |
 | Build / release | EAS Build, EAS Submit, EAS Update | TestFlight for beta |
 | Navigation | Expo Router | File-based routes; split layouts on tablet |
-| Maps | `@rnmapbox/maps` | Custom earthy style in Mapbox Studio. MapLibre is the scale-up fallback |
+| Maps | ⚠️ `@maplibre/maplibre-react-native` | Decided in Phase 2: MapLibre (open source, no account). Tile/style source TBD (e.g. OpenFreeMap or self-hosted PMTiles) with a custom earthy style |
 | Animation / drawing | Reanimated + `@shopify/react-native-skia` | Route trace, weather tapestry, elevation draw-in |
 | Charts | Victory Native (XL, Skia-based) | Elevation sparklines, profiles, weather |
 | Images | `expo-image` + blurhash | |
@@ -158,7 +158,7 @@ These need an answer before the phase that depends on them.
 | Serif / sans font pairing | Phase 0 | Pick in Paper |
 | Health library (iOS) | Phase 2 | `@kingstinct/react-native-healthkit` (recommended) vs `react-native-health` |
 | Weather provider | Phase 3 | Open-Meteo (free historical) vs The Weather Company vs other |
-| Mapbox vs MapLibre at launch | Phase 3 | Mapbox (docs default) vs MapLibre + PMTiles (lower long-term cost) |
+| Map tile / style source | Phase 3 | MapLibre chosen. OpenFreeMap vs self-hosted PMTiles vs a paid tile host |
 | Voice transcription | Phase 4 | On-device speech recognition vs Whisper API |
 | GPS sampling granularity | Phase 4 | Fixed interval vs significant changes vs adaptive |
 | Backend platform for the AI proxy + future sync | Phase 5 | TBD (e.g. Supabase, Cloudflare Workers, Dokku) |

@@ -1,0 +1,102 @@
+{
+  "expo": {
+    "name": "Rovela",
+    "slug": "rovela",
+    "version": "0.1.0",
+    "orientation": "default",
+    "icon": "./assets/images/icon.png",
+    "scheme": "rovela",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0E1318",
+    "ios": {
+      "icon": "./assets/expo.icon",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.brainivylabs.rovela",
+      "requireFullScreen": false
+    },
+    "android": {
+      "package": "com.brainivylabs.rovela",
+      "adaptiveIcon": {
+        "backgroundColor": "#0E1318",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.health.READ_EXERCISE",
+        "android.permission.health.READ_STEPS",
+        "android.permission.health.READ_DISTANCE",
+        "android.permission.health.READ_ELEVATION_GAINED"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0E1318",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Rovela draws your route and notices the places you visit, even when the app is closed, so your trip can tell its own story. Your location stays on this device.",
+          "locationWhenInUsePermission": "Rovela uses your location to place notes, photos, and moments on your trip map. Your location stays on this device.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Rovela finds the photos and videos you took during a trip and places them on your map and timeline. They never leave this device unless you share them.",
+          "savePhotosPermission": "Rovela saves share cards and trip images to your photo library.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ],
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "Rovela looks for flights, stays, and reservations during your trip dates to fill in your timeline."
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Rovela records voice memos so you can capture a moment without typing.",
+          "enableBackgroundPlayback": false
+        }
+      ],
+      "expo-notifications",
+      [
+        "@kingstinct/react-native-healthkit",
+        {
+          "NSHealthShareUsageDescription": "Rovela reads your workouts, steps, distance, and elevation during a trip to show how far you went and how high you climbed.",
+          "NSHealthUpdateUsageDescription": "Rovela does not write to Health. This permission is required by iOS but is not used.",
+          "background": false
+        }
+      ],
+      "react-native-health-connect",
+      "@maplibre/maplibre-react-native",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "minSdkVersion": 26
+          }
+        }
+      ],
+      "expo-asset"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

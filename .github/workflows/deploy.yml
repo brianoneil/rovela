@@ -1,0 +1,26 @@
+name: Deploy to Cloudflare Pages
+
+# Publishes only the marketing site. App pushes do not deploy getrovela.com.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: e59a460617f2a48be73bb62130419458
+          command: pages deploy site/public --project-name=rovela --branch=main

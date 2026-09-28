@@ -1,0 +1,12 @@
+{
+  "name": "rovela-icon-tools",
+  "private": true,
+  "description": "Renders the Rovela app icon master SVG into every platform asset. Not part of the app bundle.",
+  "type": "module",
+  "scripts": {
+    "build": "node build-icons.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}

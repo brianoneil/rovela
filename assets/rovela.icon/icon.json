@@ -1,0 +1,42 @@
+{
+  "fill": {
+    "solid": "srgb:0.05490,0.07451,0.09412,1.00000"
+  },
+  "groups": [
+    {
+      "layers": [
+        {
+          "image-name": "route.svg",
+          "name": "route"
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      },
+      "translucency": {
+        "enabled": false,
+        "value": 0
+      }
+    },
+    {
+      "layers": [
+        {
+          "image-name": "sun.svg",
+          "name": "sun"
+        }
+      ],
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      },
+      "translucency": {
+        "enabled": false,
+        "value": 0
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": "shared"
+  }
+}

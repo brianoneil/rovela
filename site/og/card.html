@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+  Source for site/public/og-image.jpg (the link preview image).
+  Serve the site/ folder, open /og/card.html at a 1200 × 630 viewport, and capture it as a JPEG.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #0E1318;
+      color: #EEF1EE;
+      font-family: "Inter Tight", sans-serif;
+    }
+
+    .card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+    }
+
+    .photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 760px;
+      height: 630px;
+      object-fit: cover;
+      object-position: 55% 40%;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(to right, #0E1318 36%, rgba(14, 19, 24, 0.7) 52%, rgba(14, 19, 24, 0) 78%);
+    }
+
+    .copy {
+      position: absolute;
+      z-index: 2;
+      top: 64px;
+      bottom: 64px;
+      left: 72px;
+      width: 560px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wordmark {
+      font-family: "Newsreader", serif;
+      font-size: 40px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      margin: auto 0 0;
+      font-family: "Newsreader", serif;
+      font-size: 80px;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+    }
+
+    svg { width: 206px; height: 44px; margin: 32px 0 0 -5px; }
+
+    .soon {
+      margin: 20px 0 0;
+      color: #F4A340;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="photo" src="../public/media/cover-fitzroy-landscape.jpg" alt="">
+    <div class="copy">
+      <div class="wordmark">Rovela</div>
+      <h1>Every journey, told beautifully.</h1>
+      <svg viewBox="0 0 168 36" aria-hidden="true">
+        <defs>
+          <linearGradient id="days" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#8CC8E0"/>
+            <stop offset="0.25" stop-color="#C39BD3"/>
+            <stop offset="0.5" stop-color="#9CCB7A"/>
+            <stop offset="0.75" stop-color="#E88FA0"/>
+            <stop offset="1" stop-color="#E8C15A"/>
+          </linearGradient>
+        </defs>
+        <path d="M4 26c18-2 24-16 42-14s22 18 40 10 24-20 46-16 22 12 32 8" fill="none" stroke="url(#days)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <p class="soon">Coming soon · iPhone, iPad &amp; Android</p>
+    </div>
+  </div>
+</body>
+</html>

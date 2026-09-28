@@ -98,6 +98,8 @@ site/
 
 `site/public` is the static site at getrovela.com. `.github/workflows/deploy.yml` publishes that directory to Cloudflare Pages on pushes that touch `site/**` or the workflow file. Keep app source, docs, and secrets out of `site/public`. Colors and type follow `src/theme/tokens.ts`.
 
+The link preview image `site/public/og-image.jpg` (1200 × 630) is rendered from `site/og/card.html`, which is not deployed. To regenerate it, serve `site/`, then run headless Chrome with `--window-size=1200,630 --screenshot` against `/og/card.html`. `apple-touch-icon.png` and `icon-192.png` / `icon-512.png` are resized from `assets/images/icon.png`; regenerate them when the app icon changes.
+
 ## Commands
 
 ```bash
